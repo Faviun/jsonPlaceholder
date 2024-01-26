@@ -4,9 +4,9 @@ const Posts = ({data}) => {
     return (
         <div>
             {data.map((item) => <div className='post-data'>
-                <p>{item.id}</p>
-                <p>{item.title}</p>
-                <p>{item.body}</p>
+                <p>User id: {item.id}</p>
+                <p>Title: <b>{item.title}</b></p>
+                <p>Post: {item.body}</p>
             </div>)}
         </div>
     );

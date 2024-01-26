@@ -4,10 +4,10 @@ const Comments = ({data}) => {
     return (
         <div>
             {data.map((item) => <div className='comment-data'>
-                <p>{item.id}</p>
-                <p>{item.name}</p>
-                <p><a href={item.email}>{item.email}</a></p>
-                <p>{item.body}</p>
+                <p>User id: {item.id}</p>
+                <p>User name: {item.name}</p>
+                <p>Email: <a href={item.email}>{item.email}</a></p>
+                <p>Comment: {item.body}</p>
             </div>)}
         </div>
     );

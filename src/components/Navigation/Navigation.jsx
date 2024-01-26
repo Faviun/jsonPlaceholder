@@ -35,7 +35,7 @@ const Navigation = (props) => {
     ]
     return (
         <div>
-            <ul className='navigationList'>
+            <ul style={props.scBut.sc ? {visibility: "", position: ""} : {visibility: "hidden", position: "absolute"}} className='navigationList'>
                 {configNav.map((item) => (
                     <li 
                         onClick={() => props.changeNav(item.url)}

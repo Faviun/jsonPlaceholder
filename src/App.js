@@ -23,8 +23,7 @@ class App extends Component {
       .then(response => response.json())
       .then(data => this.setState({
       navState: title,
-      data,
-      sc: true
+      data
     }))
     .catch(e => {
       this.setState({
@@ -42,8 +41,8 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <Navigation changeNav={this.changeNavState} />
-        <ScrollButton scBut={this.changeNavState} />
+        <Navigation changeNav={this.changeNavState} scBut={this.state}/>
+        <ScrollButton changeSc={this.changeNavState} scBut={this.state} title={this.state.navState}/>
         <Display heading={this.state} />
       </div>
     );

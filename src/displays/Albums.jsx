@@ -4,9 +4,9 @@ const Albums = ({data}) => {
     return (
         <div>
             {data.map((item) => <div className='album-data'>
-                <p>{item.userId}</p>
-                <p>{item.id}</p>
-                <p>{item.title}</p>
+                <p>User id: {item.userId}</p>
+                <p>Item id: {item.id}</p>
+                <p>Title: {item.title}</p>
             </div>)}
         </div>
     );

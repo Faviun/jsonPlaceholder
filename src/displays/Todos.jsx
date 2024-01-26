@@ -4,9 +4,9 @@ const Todos = ({data}) => {
     return (
         <div className='todo-body'>
             {data.map((item) => <div className='todo-data'>
-                <p>{item.id}</p>
-                <p>{item.title}</p>
-                <p>{String(item.completed)}</p>
+                <p>User id: {item.id}</p>
+                <p>Title: {item.title}</p>
+                <p>Status: {String(item.completed)}</p>
             </div>)}
         </div>
     );

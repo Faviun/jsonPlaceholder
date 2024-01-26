@@ -25,7 +25,9 @@
     border-right: 1px solid black;
     height: 100%;
     font-size: larger;
+    font-weight: 500;
     overflow: hidden;
+    background-color: rgb(247, 165, 135);
 }
 
 .navigationList li {
@@ -43,6 +45,11 @@
     width: 25px;
     height: 100%;
     background-color: bisque;
+    /* transform: rotate(180deg); */
+}
+
+.sc:hover {
+    background-color: rgb(231, 152, 55);
 }
 
 .display {
@@ -51,5 +58,15 @@
     padding: 20px;
     border-left: 1px solid black;
     overflow: auto;
+    background-color: #faeaea;
+}
 
+.post-data, 
+.comment-data,
+.album-data,
+.photo-data,
+.todo-data,
+.user-data
+  {
+    margin-bottom: 20px;
 }
