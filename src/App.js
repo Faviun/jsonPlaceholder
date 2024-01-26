@@ -9,7 +9,8 @@ class App extends Component {
     super(props);
     this.state = {
       navState: 'Posts',
-      data: []
+      data: [],
+      sc: true
     }
   }
 
@@ -22,12 +23,14 @@ class App extends Component {
       .then(response => response.json())
       .then(data => this.setState({
       navState: title,
-      data
+      data,
+      sc: true
     }))
     .catch(e => {
       this.setState({
         navState: 'posts',
-        data: []
+        data: [],
+        sc: true
       })
     })
   }
@@ -39,13 +42,12 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <Navigation key={this.title} changeNav={this.changeNavState}/>
-        <ScrollButton />
-        <Display heading={this.state}/>
+        <Navigation changeNav={this.changeNavState} />
+        <ScrollButton scBut={this.changeNavState} />
+        <Display heading={this.state} />
       </div>
     );
   }
 }
   
-
 export default App;
