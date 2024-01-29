@@ -1,6 +1,6 @@
 import Display from "./components/Display/Display";
 import Navigation from "./components/Navigation/Navigation";
-import './app.css';
+import './App.css';
 import { Component } from "react";
 import ScrollButton from "./components/ScrollButton/ScrollButton";
 
